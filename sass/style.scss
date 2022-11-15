@@ -1,0 +1,153 @@
+@import "base/variables";
+@import "base/animations";
+@import "base/mixins";
+@import "base/fonts";
+
+@import "blocks/header";
+@import "blocks/mainText";
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+//   font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: bgopacity 1.5s linear;
+  opacity: 0.6;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #03a9f4;
+  mix-blend-mode: overlay;
+}
+#explore
+{
+  position: absolute;
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  animation: expUp 3s ease-out;
+  animation-fill-mode: forwards;
+}
+#explore:hover
+{
+  letter-spacing: 6px;
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social li
+{
+  list-style: none;
+  transition: 0.5s;
+}
+.social li a
+{
+  transform: scale(0.0);
+  display: inline-block;
+  margin-right: 20px;
+  filter: invert(1);
+  
+  animation: socialScale 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+.social li:hover
+{
+  transform: translateY(-5px);
+}
+#twitter {
+    margin-left: 8px;
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  color: #03a9f4; 
+}
+
+@media (max-width: 991px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+}
