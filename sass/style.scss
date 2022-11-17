@@ -2,9 +2,11 @@
 @import "base/animations";
 @import "base/mixins";
 @import "base/fonts";
+@import "base/swup";
 
 @import "blocks/header";
 @import "blocks/mainText";
+@import "blocks/buttons";
 *
 {
   margin: 0;
@@ -12,6 +14,9 @@
   box-sizing: border-box;
 //   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: #111;
 }
 .showcase
 {
@@ -94,7 +99,6 @@
   display: inline-block;
   margin-right: 20px;
   filter: invert(1);
-  
   animation: socialScale 0.5s ease-out;
   animation-fill-mode: forwards;
 }
@@ -115,6 +119,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 .menu ul
 {
@@ -126,6 +131,7 @@
 }
 .menu ul li a
 {
+  text-transform: capitalize;
   text-decoration: none;
   font-size: 24px;
   color: #111;
