@@ -1,6 +1,5 @@
 'use strict'
 
-
 //menu button
 const menuToggle = document.querySelector('.toggle');
 const showcase = document.querySelector('.showcase');
@@ -23,14 +22,29 @@ textrev.from(".line span", 1, {
     }
 });
 
-//main page button location change animation
-const exploreLink = document.querySelector('#explore');
-const swupElem = document.querySelector('#swup');
-const body = document.querySelector('body');
+// header position detector 
+const EPSILON = 2;
 
+function setOverflow () {
+  var firstDiv = document.querySelector('.header_small');
+  var rect = firstDiv.getBoundingClientRect();
+  if (Math.abs(rect.top) > 1) {
+    firstDiv.style.background = 'none';
+    console.log('bigger');
+  }
+  else {
+    firstDiv.style = 'background: rgb(218, 236, 237); transition: all 0.2s;';
+    console.log('smaller');
+  }
+}
 
-console.log(swupElem);
-exploreLink.addEventListener('click', ()=> {
-    swupElem.style = "opacity: 0; transition: 500ms;";
-    location.href = "about.html";
-});
+function maybeSetOverflow () {
+  if (!setOverflow.isBusy) {
+    setOverflow.isBusy = true;
+    window.requestAnimationFrame(() => {setOverflow.isBusy = false; setOverflow()});
+  }
+}
+
+window.addEventListener('scroll', maybeSetOverflow);
+window.addEventListener('resize', maybeSetOverflow);
+window.addEventListener('load'  , maybeSetOverflow);

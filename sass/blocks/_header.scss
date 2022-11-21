@@ -34,3 +34,21 @@ header .logo
   background-position: center;
   cursor: pointer;
 }
+
+.header {
+    &_small {
+        position: sticky;
+        padding: 0 100px;
+        margin-top: 40px;
+        top: 0;
+        padding: 10px 100px;
+        .toggle {
+            filter: invert(0.75);
+        }
+        .logo {
+            filter: invert(0.75);
+            height: 35px;
+        }
+    }
+    
+}

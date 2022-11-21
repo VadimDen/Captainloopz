@@ -1,0 +1,32 @@
+.description {
+    padding: 0 100px;
+    margin: 40px 0 100px 0;
+    &__header {
+        text-transform: uppercase;
+        color: #096a9690; 
+        letter-spacing: 2px;
+        margin: 40px 0 40px 0;
+    }
+    &__img {
+        width: 475px;
+        height: 410px;
+        border-radius: 5px;
+    }
+    &__main {
+        display: flex;
+    }
+    &__text {
+        padding: 30px;
+        color: rgba(17, 17, 17, 0.699);
+        background-color: #eef2f5f8;
+        margin-left: 15px;
+        max-height: 410px;
+        overflow-y: scroll;
+    }
+}
+.showcase {
+    &_secondaryPg {
+        display: block !important;
+        padding: 0 !important;
+    }
+}

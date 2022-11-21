@@ -7,6 +7,8 @@
 @import "blocks/header";
 @import "blocks/mainText";
 @import "blocks/buttons";
+@import "blocks/about";
+@import "blocks/footer";
 *
 {
   margin: 0;
@@ -31,6 +33,9 @@ body {
   background: #111;
   transition: 0.5s;
   z-index: 2;
+  &_secondaryPg {
+    background-color: #e8ebee;
+  }
 }
 .showcase.active
 {
@@ -111,7 +116,7 @@ body {
 }
 .menu
 {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 300px;
@@ -120,6 +125,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  z-index: -10;
 }
 .menu ul
 {
@@ -128,6 +134,7 @@ body {
 .menu ul li
 {
   list-style: none;
+  margin-bottom: 10px;
 }
 .menu ul li a
 {
@@ -143,11 +150,6 @@ body {
 
 @media (max-width: 991px)
 {
-  .showcase,
-  .showcase header
-  {
-    padding: 40px;
-  }
   .text h2
   {
     font-size: 3em;
