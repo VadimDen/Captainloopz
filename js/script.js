@@ -33,7 +33,7 @@ function setOverflow () {
     console.log('bigger');
   }
   else {
-    firstDiv.style = 'background: rgb(218, 236, 237); transition: all 0.2s;';
+    firstDiv.style = 'background: #1D1C40;; transition: all 0.2s;';
     console.log('smaller');
   }
 }

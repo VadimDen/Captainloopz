@@ -1,17 +1,22 @@
 .footer {
     padding: 50px 0;
-    background-color: rgb(218, 236, 237);
-    padding-left: 100px;
+    background-color: $footerGray;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     div {
         text-align: center;
         display: flex;
         color: rgba(17,17,17,.5);
         font-weight: 300;
     }
+    &__text  {
+        padding-bottom: 41px;
+        border-bottom: 2px solid $acidGreen;
+    }
     &__buttons {
-        margin-right: 40vw;
+        margin-top: 30px;
     }
     .social {
         position: static;

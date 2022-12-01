@@ -39,14 +39,11 @@ header .logo
     &_small {
         position: sticky;
         padding: 0 100px;
-        margin-top: 40px;
+        margin-top: 0px;
         top: 0;
         padding: 10px 100px;
-        .toggle {
-            filter: invert(0.75);
-        }
+        animation: none;
         .logo {
-            filter: invert(0.75);
             height: 35px;
         }
     }

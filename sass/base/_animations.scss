@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes contentopacity{
+  0% {
+   opacity: 0;
+  }
+  100% {
+   opacity: 1; 
+  }
+}
+
 @keyframes dropIn{
   0% {
    top: -20vh;

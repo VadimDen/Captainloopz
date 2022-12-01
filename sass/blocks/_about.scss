@@ -1,27 +1,72 @@
 .description {
-    padding: 0 100px;
-    margin: 40px 0 100px 0;
-    &__header {
-        text-transform: uppercase;
-        color: #096a9690; 
-        letter-spacing: 2px;
-        margin: 40px 0 40px 0;
-    }
-    &__img {
-        width: 475px;
-        height: 410px;
-        border-radius: 5px;
-    }
+    padding-top: 86px;
+    display: flex;
+        justify-content: center;
     &__main {
         display: flex;
+        padding-bottom: 90px;
+        width: fit-content;
+        border-bottom: 2px solid $lightblue;
+    }
+    &__photo {
+        background-color: lightgray;
+        width: 240px;
+        height: 240px;
+        border-radius: 100%;
+        margin-right: 78px;
+    }
+    &__header {
+        font-size: 50px;
+        color: $blueText;
+        text-transform: capitalize;
+        font-family: 'Amatic SC', cursive;
     }
     &__text {
-        padding: 30px;
-        color: rgba(17, 17, 17, 0.699);
-        background-color: #eef2f5f8;
-        margin-left: 15px;
-        max-height: 410px;
-        overflow-y: scroll;
+        max-width: 774px;
+        margin-top: 39px;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: left;
+        color: $grayText;
+        font-weight: 200;
+    }
+    &__projects {
+        padding-top: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        padding-bottom: 85px;
+        .description__header {
+            font-size: 28px;
+            line-height: 20px;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+    }
+    &__thumbnails {
+        margin-top: 54px;
+        display: grid;
+        grid-template-columns: repeat(3, 315px);
+        grid-auto-rows: 136px;
+        column-gap: 23px;
+        row-gap: 19px;
+    }
+    &__picture {
+        background-color: rgba(41, 127, 255, 0.15);
+    }
+    &__explore {
+        color: white;
+        height: 80px;
+        width: 345px;
+        background-color: $orange;
+        font-weight: 700;
+        border: none;
+        font-size: 23px;
+        line-height: 23px;
+        letter-spacing: 0.25em;
+        text-align: center;
+        margin-top: 85px;
     }
 }
 .showcase {
