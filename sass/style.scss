@@ -11,16 +11,21 @@
 @import "blocks/about";
 @import "blocks/footer";
 @import "blocks/menu";
+@import "blocks/cube";
+@import "blocks/projects";
 *
 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-//   font-family: 'Poppins', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  @include robotoFont;
 }
 body {
     background-color: $base-color;
+    max-width: 100vw;
+}
+.body_secondary {
+    overflow: auto;
 }
 .content {
     width: 100%;
@@ -37,7 +42,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #848484 0%, #5d5d5d 10%, #2f2f2f 25%, #000000 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #848484 0%, #5d5d5d 10%, #2f2f2f 25%, #000000 40%, #222222 100%);
   transition: 0.5s;
   z-index: 2;
   &_secondaryPg{
@@ -75,15 +81,15 @@ body {
   position: absolute;
   display: inline-block;
   font-size: 1em;
-  background: $base-color;
+  background: white;
   padding: 10px 30px;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
   margin-top: 10px;
-  color: white;
+  color: $base-color;
+  border: none;
   border-radius: 10px 40px 25px;
-  border-color: white;
   letter-spacing: 2px;
   transition: 0.2s;
   animation: expUp 3s ease-out;
@@ -123,7 +129,6 @@ body {
 #twitter {
     margin-left: 8px;
 }
-
 @media (max-width: 991px)
 {
   .text h2

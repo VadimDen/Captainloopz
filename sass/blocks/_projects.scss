@@ -1,0 +1,42 @@
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 86px;
+    padding-bottom: 85px;
+    &__items {
+            padding-top: 88px;
+            display: grid;
+            grid-template-columns: repeat(3, 372px);
+            column-gap: 38px;
+            row-gap: 80px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    &__image {
+        height: 300px;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    &__title {
+        color: $blueText;
+        text-transform: capitalize;
+        font-size: 27px;
+        margin-top: 22px;
+        font-weight: 400;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

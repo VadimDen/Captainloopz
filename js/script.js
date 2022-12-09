@@ -22,29 +22,17 @@ textrev.from(".line span", 1, {
     }
 });
 
-// header position detector 
-const EPSILON = 2;
+//all projects button link
+const projLink = document.querySelector('.description__explore');
 
-function setOverflow () {
-  var firstDiv = document.querySelector('.header_small');
-  var rect = firstDiv.getBoundingClientRect();
-  if (Math.abs(rect.top) > 1) {
-    firstDiv.style.background = 'none';
-    console.log('bigger');
-  }
-  else {
-    firstDiv.style = 'background: #1D1C40;; transition: all 0.2s;';
-    console.log('smaller');
-  }
-}
 
-function maybeSetOverflow () {
-  if (!setOverflow.isBusy) {
-    setOverflow.isBusy = true;
-    window.requestAnimationFrame(() => {setOverflow.isBusy = false; setOverflow()});
-  }
-}
+projLink.addEventListener('click', ()=> {
+    location.href = "work.html";
+});
 
-window.addEventListener('scroll', maybeSetOverflow);
-window.addEventListener('resize', maybeSetOverflow);
-window.addEventListener('load'  , maybeSetOverflow);
+const servicesLink = document.querySelector('.description__explore_survices');
+
+
+servicesLink.addEventListener('click', ()=> {
+    location.href = "services.html";
+});
