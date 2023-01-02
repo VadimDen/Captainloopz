@@ -3,40 +3,88 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 86px;
     padding-bottom: 85px;
-    &__items {
-            padding-top: 88px;
-            display: grid;
-            grid-template-columns: repeat(3, 372px);
-            column-gap: 38px;
-            row-gap: 80px;
+
+    .description__header {
+        grid-column-start: 1;
+        grid-column-end: 4;
     }
+
+    &__items {
+        padding-top: 88px;
+        display: grid;
+        grid-template-columns: repeat(3, 372px);
+        column-gap: 38px;
+        row-gap: 80px;
+    }
+
     &__item {
-        display: flex;
+        position: relative;
         flex-direction: column;
         cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
     }
+
     &__image {
         height: 300px;
+
         img {
             object-fit: cover;
             width: 100%;
             height: 100%;
-            transition: all 0.5s;
-            &:hover {
-                transform: scale(1.05);
-            }
         }
     }
+
     &__title {
-        color: $blueText;
+        color: white;
         text-transform: capitalize;
         font-size: 27px;
-        margin-top: 22px;
-        font-weight: 400;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        padding: 10px;
+        background: $blueTextOp07;
+        mix-blend-mode: normal;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        font-style: italic;
+        transition: all 0.2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        span {
+            display: inline-block;
+            position: relative;
+        }
+
+        span:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        span:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
         &:hover {
-            text-decoration: underline;
+            opacity: 1;
+            text-decoration: none;
         }
     }
 }
