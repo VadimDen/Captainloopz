@@ -60,7 +60,7 @@ linksBD.forEach(elem => {
 function getCurrentURL() {
     return window.location.pathname
 }
-if (getCurrentURL() == '/project.html') {
+if (getCurrentURL() == '/Captainloopz/project.html') {
     const projectsBD = {
         P1: {
             name: 'Vaporwave Bodies Vj Pack',
