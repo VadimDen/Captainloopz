@@ -197,8 +197,12 @@ if (getCurrentURL() == '/project.html' || getCurrentURL() == '/Captainloopz/proj
     let projectid = sessionStorage.getItem('Product#');
     nextProject.addEventListener('click', () => {
         projectid++;
-        sessionStorage.setItem('Product#', projectid);
-        location.href = "project.html";
+        if (projectid > 6) {
+            location.href = "work.html";
+        } else {
+            sessionStorage.setItem('Product#', projectid);
+            location.href = "project.html";
+        }
     })
     prevProject.addEventListener('click', () => {
         projectid--;
